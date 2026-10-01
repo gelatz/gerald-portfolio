@@ -1,137 +1,101 @@
-# Gerald — Full-Stack Developer Portfolio
+# Gerald Funtanar — Full-Stack Web Developer
 
-A production-ready personal portfolio built around Gerald's full-stack development work. The site features an original responsive interface, dark/light themes, subtle motion, data-driven project cards, accessible project case studies, and a validated contact form ready for a delivery service.
+Personal developer portfolio showcasing my experience, technical skills, and selected software development projects.
+
+## Live Portfolio
+
+**[View My Portfolio](https://gfuntanar-dev.vercel.app/)**
+
+The portfolio is deployed and hosted on Vercel.
+
+## About Me
+
+I'm a Full-Stack Web Developer with 3+ years of experience developing web applications, RESTful APIs, database-driven systems, and internal business applications.
+
+I enjoy transforming ideas and complex workflows into efficient, maintainable, and user-friendly solutions while continuously improving my skills and exploring new technologies.
+
+## What I Do
+
+My development experience includes:
+
+- Web Application Development
+- Front-End Development
+- Back-End Development
+- RESTful API Development
+- Database Design & Integration
+- System Integration
+- System Deployment
+- Responsive UI Development
 
 ## Technologies
 
-- React 18 and Vite
-- JavaScript and modern CSS
-- Framer Motion
-- Lucide React and React Icons
-- Vercel-ready static deployment
+### Front-End
 
-## Installation
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- Bootstrap
+- Vite
 
-```bash
-npm install
-```
+### Back-End
 
-## Development
+- Node.js
+- Express.js
+- PHP
+- RESTful APIs
 
-```bash
-npm run dev
-```
+### Database
 
-Open the local URL printed by Vite.
+- Microsoft SQL Server
+- MySQL
+- Relational Database Design
 
-## Production build
+### Tools & Platforms
 
-```bash
-npm run build
-npm run preview
-```
+- Git
+- GitHub
+- Vercel
+- Visual Studio Code
+- Postman
 
-The compiled site is written to `dist/`.
+## Projects
 
-## Edit profile information
+The portfolio contains selected projects demonstrating my experience in full-stack development, API integration, database-driven applications, system design, and deployment.
 
-Edit `src/data/profile.js`. This is the central location for the name, title, summary, email address, location, GitHub, LinkedIn, availability, resume path, and statistics.
+Each project includes information about its purpose, technologies used, implementation, and key features.
 
-The initial email and social links are intentionally obvious placeholders. Replace them before publishing.
+**[Explore My Projects →](https://gfuntanar-dev.vercel.app/#projects)**
 
-## Add or edit projects
+## Portfolio Features
 
-Projects are stored in `src/data/projects.js`. Add a new object to the exported array; no component changes are required.
+The portfolio includes:
 
-```js
-{
-  id: 'unique-project-id',
-  title: 'Project title',
-  category: 'Project category',
-  description: 'Short card description',
-  image: '/images/projects/project-file.svg',
-  imageAlt: 'Accessible image description',
-  technologies: ['React', 'Node.js'],
-  github: 'https://github.com/...',
-  demo: 'https://...',
-  featured: true,
-  overview: 'Case-study overview',
-  problem: 'The problem being solved',
-  solution: 'How the project solves it',
-  features: ['Feature one', 'Feature two'],
-  challenges: 'Main implementation challenge',
-  learned: 'What the work taught you',
-}
-```
+- Responsive desktop and mobile design
+- Dark and light themes
+- Interactive animations
+- Project showcase and case studies
+- Technical skills overview
+- Professional experience
+- Downloadable CV
+- Contact form with email delivery
+- Responsive navigation
+- Production deployment through Vercel
 
-Set `featured` to `true` to display the project. Empty GitHub and demo strings are handled gracefully and show a private-project note in the details view.
+## Built With
 
-## Replace project screenshots
+This portfolio was built using:
 
-Place optimized screenshots in `public/images/projects/`. WebP or AVIF is recommended for photographic screenshots; SVG is suitable for illustrations. Update the corresponding `image` and `imageAlt` fields in `src/data/projects.js`.
+`React.js` · `Vite` · `JavaScript` · `CSS` · `Framer Motion` · `Lucide React`
 
-For consistent cards, use a 16:10 image around 1440 × 900 pixels. Images below the fold are lazy-loaded automatically.
+The contact system uses a serverless API deployed through Vercel with Gmail API integration.
 
-## Replace the CV
+## Contact
 
-Replace `public/resume/Gerald-CV.pdf` with the real PDF while keeping the filename, or update the `resume` value in `src/data/profile.js`.
+Interested in working together or discussing a project?
 
-## Contact-form Gmail delivery
+**[Contact Me Through My Portfolio](https://gfuntanar-dev.vercel.app/#contact)**
 
-The form sends submissions to `api/contact.js`. The server validates and sanitizes the request, refreshes a Google OAuth access token, and sends an RFC 2822 message to `geraldfuntanar@gmail.com` using the Gmail API. Only visitor addresses ending in `@gmail.com` are accepted by both the browser and server.
+---
 
-### Gmail API setup
-
-1. Create or select a project in Google Cloud Console.
-2. Enable the Gmail API.
-3. Configure the OAuth consent screen and add `geraldfuntanar@gmail.com` as a test user while setting up.
-4. Create an OAuth 2.0 client ID and client secret.
-5. Authorize that client for the narrow `https://www.googleapis.com/auth/gmail.send` scope with offline access and obtain a refresh token.
-6. Copy `.env.example` to `.env.local` and provide `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, and `GMAIL_REFRESH_TOKEN`.
-7. Keep `GMAIL_SENDER_EMAIL=geraldfuntanar@gmail.com`; it must match the account that granted the refresh token.
-
-Add the same variables under **Vercel → Project Settings → Environment Variables**, mark the client secret and refresh token as sensitive, and redeploy. Never prefix these values with `VITE_`, because that would expose them to the browser.
-
-For stable production use, move an external OAuth consent app out of Testing status after setup. Google states that refresh tokens for external apps left in Testing normally expire after seven days. Use `npx vercel dev` for local form testing because ordinary `npm run dev` serves only the Vite frontend and does not run the `/api` function.
-
-## SEO configuration
-
-Before deploying, replace `https://your-domain.example` in:
-
-- `index.html`
-- `public/robots.txt`
-- `public/sitemap.xml`
-
-The title, description, Open Graph image, favicon, theme color, robots file, and sitemap are already configured.
-
-## Deploy to Vercel
-
-1. Push this directory to a GitHub repository.
-2. In Vercel, choose **Add New → Project** and import the repository.
-3. Vercel should detect Vite automatically.
-4. Confirm the build command is `npm run build`.
-5. Confirm the output directory is `dist`.
-6. Deploy.
-
-Pushes to the production branch can create production deployments, while other branches receive preview deployments. No token or secret is required in the repository.
-
-## Project structure
-
-```text
-portfolio/
-├── public/
-│   ├── images/projects/      Project artwork and screenshots
-│   ├── resume/               Downloadable CV
-│   ├── favicon.svg
-│   ├── robots.txt
-│   └── sitemap.xml
-├── src/
-│   ├── components/           Reusable page sections and UI
-│   ├── data/                 Profile, project, skill, and experience content
-│   ├── styles/               Global responsive styling and theme variables
-│   ├── App.jsx
-│   └── main.jsx
-├── index.html
-├── package.json
-└── vite.config.js
-```
+© Gerald Funtanar. All rights reserved.

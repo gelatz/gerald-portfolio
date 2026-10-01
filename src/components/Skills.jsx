@@ -1,15 +1,20 @@
 import { motion } from 'framer-motion'
 import { Braces, Code2, CodeXml, Database, GitBranch, Server, TerminalSquare, Workflow } from 'lucide-react'
+import { BsOpenai } from 'react-icons/bs'
 import { SiBootstrap, SiCss, SiGithub, SiHtml5, SiJavascript, SiMysql, SiNodedotjs, SiPhp, SiPostman, SiReact, SiRedis, SiVercel } from 'react-icons/si'
 import SectionHeading from './SectionHeading.jsx'
 import { skillGroups } from '../data/skills.js'
+
+function SsmsIcon(props) {
+  return <img src="/images/skills/ssms.svg" alt="" width="18" height="18" {...props} />
+}
 
 const icons = {
   HTML5: SiHtml5, CSS3: SiCss, JavaScript: SiJavascript, Bootstrap: SiBootstrap, 'React.js': SiReact,
   PHP: SiPhp, 'Node.js': SiNodedotjs, 'REST API': Workflow,
   'SQL Server': Database, MySQL: SiMysql, SQL: Database,
   Git: GitBranch, GitHub: SiGithub, Redis: SiRedis, 'Windows Server': Server, 'VS Code': Code2,
-  Vercel: SiVercel,
+  Vercel: SiVercel, Codex: BsOpenai, SSMS: SsmsIcon,
 }
 
 const categoryIcons = { Frontend: CodeXml, Backend: Braces, Database, 'Tools & Infrastructure': TerminalSquare }

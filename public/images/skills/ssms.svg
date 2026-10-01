@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="SQL Server Management Studio">
+  <defs>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0d48b7"/>
+      <stop offset=".52" stop-color="#05aafa"/>
+      <stop offset="1" stop-color="#33c8ff"/>
+    </linearGradient>
+    <linearGradient id="lower" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0734a0"/>
+      <stop offset=".55" stop-color="#087fe9"/>
+      <stop offset="1" stop-color="#1ab7fb"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1=".1" y1="0" x2=".9" y2="1">
+      <stop stop-color="#078ef2"/>
+      <stop offset=".52" stop-color="#40c3fd"/>
+      <stop offset="1" stop-color="#b1c9ff"/>
+    </linearGradient>
+    <linearGradient id="cross" x1=".9" y1="0" x2=".1" y2="1">
+      <stop stop-color="#71c9fc"/>
+      <stop offset=".55" stop-color="#147de6"/>
+      <stop offset="1" stop-color="#063da7"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#lower)" d="M12 91c0-12 23-21 52-21s52 9 52 21v16c0 12-23 21-52 21s-52-9-52-21z"/>
+  <path fill="url(#top)" d="M12 20C12 9 35 0 64 0s52 9 52 20v17c0 12-23 21-52 21s-52-9-52-21z"/>
+  <path fill="#062265" opacity=".72" d="M17 36c11 11 28 14 47 17 22-4 41-11 49-21v19c-12 13-31 19-49 23-20-4-37-12-47-20z"/>
+  <path fill="url(#ribbon)" d="M116 23v29c0 8-6 13-19 19L30 102c-12 6-18 12-18 22V96c0-9 6-14 18-20l67-33c13-6 19-12 19-20z"/>
+  <path fill="url(#cross)" d="M12 24v29c0 8 6 13 19 19l67 32c12 5 18 12 18 21V97c0-9-6-14-18-20L31 44C18 38 12 32 12 24z"/>
+  <path fill="#b5d8ff" opacity=".48" d="M72 63 98 77c12 6 18 11 18 20v11c-5-9-13-13-25-19L63 75z"/>
+  <ellipse cx="64" cy="107" rx="52" ry="21" fill="url(#lower)" opacity=".93"/>
+  <path fill="#062f9a" opacity=".38" d="M12 107c5-10 25-17 52-17s47 7 52 17c-10 10-28 17-52 17s-42-7-52-17z"/>
+</svg>
